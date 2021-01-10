@@ -32,9 +32,9 @@
 }
 
 .App-header {
-  background-size: contain;
+  background-size: cover;
   /*background-position: center;*/
-  background-image: url("https://media.discordapp.net/attachments/796276290981724210/797894608058449971/Desktop_-_9.png?width=949&height=675");;
+  background-image: url("https://media.discordapp.net/attachments/796276290981724210/797903174711246928/Frame_1.png?width=1156&height=650");;
   background-color: #2C2F33;
   min-height: 100vh;
   display: flex;
