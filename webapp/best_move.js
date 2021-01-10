@@ -18,13 +18,16 @@ engine.onmessage = function (res)
         engine.postMessage("go ponder");
         // set ms per move
         engine.postMessage("go movetime 4200");
-
-    } else if (res.indexOf("bestmove") > -1) {
-        bestmove = res.match(/bestmove\s+(\S+)/);
-        if (bestmove) {
-            console.log(bestmove[1]);
+    }
+    // if we found the line containing the best move, output it
+    else if (res.indexOf("bestmove") > -1) {
+        bestline = res.match(/^bestmove ([a-h][1-8])([a-h][1-8])([qrbn])?/);
+        if (bestline) {
+            console.log(bestline[1]);
             process.exit();
         }
+        // to use when displaying to the user
+        var bestmove = bestline[1];
     }
 };
 
