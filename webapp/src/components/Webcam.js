@@ -30,6 +30,7 @@ const MyComponent = () => {
                 while ( n-- ) {
                     u8arr[ n ] = bstr.charCodeAt( n );
                 }
+
                 const file = new File( [u8arr], id + ".jpg", { type: mime } );
                 formData.append( "picture", file );
 

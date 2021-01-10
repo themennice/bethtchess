@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a6d01d6-cdf0-4f25-8aea-ac96fc513e34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Webcam.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Webcam.js" afterDir="false" />
-    </list>
+    <list default="true" id="6a6d01d6-cdf0-4f25-8aea-ac96fc513e34" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610227463240</updated>
       <workItem from="1610227465637" duration="3093000" />
-      <workItem from="1610238203742" duration="17998000" />
+      <workItem from="1610238203742" duration="18458000" />
     </task>
     <servers />
   </component>
