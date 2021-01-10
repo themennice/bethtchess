@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+#headerSegment{
+  background-color: #204229;
+}
+.webcam{
+  position: center;
+  display: flex;
+}
+
+.leftBar{
+  height: 100%;
+  width: 300px;
+  background-color: #275c35;
+}
+.timer{
+  position: absolute;
+  align-items: center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,11 +31,10 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #184a35;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;

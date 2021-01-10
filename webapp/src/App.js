@@ -1,5 +1,6 @@
 import './App.css';
 import Webcam from "./components/Webcam";
+import Sidebars from "./components/Sidebars";
 
 function App() {
   return (
