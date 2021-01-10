@@ -1,3 +1,0 @@
-# bethtchess
-
-Chess prediction
