@@ -1,26 +1,8 @@
 # BethtChess
 
-Chess prediction
+Best Chess prediction
 
-## Inspiration
-2020 has definitely been the year of chess. Between 2020 locking everyone indoors, and Netflix's Queen Gambit raking in 62 millino viewers, everyone is either talking about chess, or watching others play chess. 
-
-## What it does
-
-## How I built it
-
-## Challenges I ran into
-
-## Accomplishments that I'm proud of
-
-## What I learned
-
-## What's next for Say Yes to Chess!
-
-=======
-Best chess move
-
-Context
+## Context
 The goal of the project is to build a model able to generate FEN description based on a schematic image of a chess board.
 
 Content
@@ -44,8 +26,26 @@ Pieces were generated with the following probability distribution:
 
 Labels are in a filename in Forsyth–Edwards Notation format, but with dashes instead of slashes.
 
-Acknowledgements
+##Acknowledgements
 Chess.com for providing images of pieces and boards.
 
-Note
+##Note
 Some positions may be illegal such as both kings are under check.
+
+## Inspiration
+2020 has definitely been the year of chess. Between 2020 locking everyone indoors, and Netflix's Queen Gambit raking in 62 millino viewers, everyone is either talking about chess, or watching others play chess. 
+
+## What it does
+
+## How I built it
+
+## Challenges I ran into
+
+## Accomplishments that I'm proud of
+
+## What I learned
+
+## What's next for Say Yes to Chess!
+
+=======
+Best chess move
