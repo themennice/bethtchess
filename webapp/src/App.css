@@ -1,9 +1,10 @@
+
 .App {
   text-align: center;
 }
 
 #headerSegment{
-  background-color: #204229;
+  background-color: #131313;
 }
 .webcam{
   position: center;
@@ -13,7 +14,7 @@
 .leftBar{
   height: 100%;
   width: 300px;
-  background-color: #275c35;
+  background-color: #2C2F33;
 }
 .timer{
   position: absolute;
@@ -33,8 +34,8 @@
 .App-header {
   background-size: contain;
   background-position: center;
-  background-image: url("https://media.discordapp.net/attachments/796276290981724210/797894608058449971/Desktop_-_9.png?width=949&height=675");;
-  background-color: #2C2F33;
+  background-image: url("https://media.discordapp.net/attachments/796276290981724210/797903174711246928/Frame_1.png?width=1201&height=676");
+  background-color: #131313;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -62,7 +63,7 @@
 }
 
 .blue-button {
-  background-color: #7289da;
+  background-color: #7289DA;
   border: 2px solid #7289da;
   color: #fff;
 }
@@ -109,8 +110,17 @@
 }
 
 .modal {
-  font-size: 20px;
+  position: center;
+  align-items: center;
 }
+
+.bestMoveContent{
+  font-family: 'Comfortaa', serif;
+  position: center;
+  font-size: 50px;
+  align-items: center;
+}
+
 .modal > .header {
   width: 100%;
   border-bottom: 1px solid gray;
@@ -149,4 +159,81 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+}
+
+.progress-value {
+  animation: load 4s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }

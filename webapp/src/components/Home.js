@@ -198,13 +198,19 @@ const Hero = () => {
                                         <br />
                                     </div>
                                     <div className="actions">
-                                        <button onClick={handleClick} className="button"> Allow Camera </button>
                                         <button
-                                            className="button"
+                                            onClick={handleClick }
+                                            className="blue-button">
+                                            <i className="camera icon"/>
+                                            Allow Camera
+                                        </button>
+                                        <button
+                                            className="blue-button"
                                             onClick={() => {
                                                 close();
                                             }}
                                         >
+                                            <i className="cancel icon"/>
                                             Cancel
                                         </button>
                                     </div>

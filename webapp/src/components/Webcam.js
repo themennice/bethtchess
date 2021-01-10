@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Webcam from "react-webcam";
 import 'fomantic-ui/dist/semantic.min.css'
+import Popup from "reactjs-popup";
 
 const WebcamComponent = () => {
     const countdown = 3;
@@ -9,6 +10,7 @@ const WebcamComponent = () => {
 
     const [seconds, setSeconds] = useState( countdown );
     const [isTimerActive, setTimerActive] = useState( false );
+    const [loading, setLoading] = useState(false);
 
     let id = 0;
 
@@ -76,6 +78,7 @@ const WebcamComponent = () => {
         if ( seconds === 0 ) {
             setSeconds( countdown );
             setTimerActive( false );
+            setLoading(false)
         }
 
         return () => (
@@ -94,7 +97,7 @@ const WebcamComponent = () => {
                      width: '850px',
                      alignItems: 'center',
                      alignSelf: 'center',
-                     color: '#204229',
+                     color: 'transparent',
                      display: 'block',
                      marginLeft: 'auto',
                      marginRight: 'auto',
@@ -106,28 +109,99 @@ const WebcamComponent = () => {
 
             <Webcam
                 audio={ false }
+                style={{
+                    borderRadius: '15px',
+                    borderColor: '#c1e6cb',
+                    border: '8px solid #555'
+                }}
                 ref={ webcamRef }
                 screenshotFormat="image/jpeg"
             />
             <div>
                 { !isTimerActive ?
                     <div className="wrapper-buttons">
-                        <button
-                            onClick={ () => setTimerActive( !isTimerActive ) }
-                            className="blue-button">
-                            <i className="camera icon"/>
-                        Capture Photo
-                        </button>
+                        <Popup
+                            style={ {
+                                background: '#2C2F33',
+                                margin: 0,
+                                padding: 0
+                            } }
+                            trigger={
+                                <button
+                                    onClick={ () => {
+                                        setLoading( false );
+                                        return (
+                                            <Webcam/>
+                                        )
+                                    } }
+                                    className="blue-button">
+                                    <i className="camera icon"/>
+                                    CAPTURE PHOTO
+                                </button>
+                            }
+                            modal
+                            nested
+                        >
+                            { close => (
+                                <div className="modal" style={ {
+                                    background: '#99AAB5',
+                                    height: '300px',
+                                    alignItems: 'center',
+                                    position: 'center'
+                                } }>
+                                    <button className="close" onClick={ close }>
+                                        &times;
+                                    </button>
+                                    <div className="bestMoveContent"
+                                    style={{
+                                        position:'center',
+                                        display: 'center',
+                                        marginLeft: '70px',
+                                        fontFamily: 'Comfortaa',
+                                        color: '#ffffff',
+                                        fontSize: '50px'
+                                    }}>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        NEXT BEST MOVE:
+                                    </div>
+                                    <div
+                                         style={{
+                                             position:'center',
+                                             display: 'center',
+                                             marginLeft: '110px',
+                                             fontFamily: 'Comfortaa',
+                                             color: '#ffffff',
+                                             fontSize: '50px'
+                                         }}>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        ROOK F1 TO E1
+                                    </div>
+                                    <div className="actions">
+                                        <button
+                                            style={{
+                                                marginTop: '80px'
+                                            }}
+                                            onClick={ close }
+                                            className="blue-button">
+                                            <i className="camera icon"/>
+                                            SCAN AGAIN
+                                        </button>
+                                    </div>
+                                </div>
+                            ) }
+                        </Popup>
+
                     </div> :
-                    // <button
-                    //     className="ui inverted disabled animate teal labeled icon button">
-                    //     <i className="camera icon"/>
-                    //     { seconds }
-                    // </button>
-                    <div className="wrapper-buttons">
-                        <button className="blue-button">
-                            <i className="camera icon"/> { seconds }
-                        </button>
+                    <div className="progress">
+                        <div className="progress-value"/>
                     </div>
                 }
             </div>
