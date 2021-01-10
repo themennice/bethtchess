@@ -1,10 +1,11 @@
 import './App.css';
+import Webcam from "./components/Webcam";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Hello hallo holla
+          <Webcam/>
       </header>
     </div>
   );
