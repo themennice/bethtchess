@@ -1,3 +1,5 @@
+// function engineGame(options) {
+
 var stockfish = require("stockfish");
 var engine = stockfish();
 // replace the fen assignment below to the output of Tanya's algorithm
@@ -21,7 +23,7 @@ engine.onmessage = function (res)
     }
     // if we found the line containing the best move, output it
     else if (res.indexOf("bestmove") > -1) {
-        bestline = res.match(/^bestmove ([a-h][1-8])([a-h][1-8])([qrbn])?/);
+        bestline = res.match(/bestmove\s+(\S+)/);
         if (bestline) {
             console.log(bestline[1]);
             process.exit();
@@ -32,3 +34,5 @@ engine.onmessage = function (res)
 };
 
 engine.postMessage("uci");
+
+// }

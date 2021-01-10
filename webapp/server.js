@@ -2,6 +2,7 @@ const express = require("express")
 const fileUpload = require("express-fileupload")
 const cors = require("cors")
 const morgan = require("morgan")
+var stockfish = require("stockfish");
 
 const app = express()
 
@@ -35,6 +36,16 @@ app.post("/picture", async (req, res) => {
         res.status(500).send(e)
     }
 })
+
+app.post("/analyze", async (req, res) => {
+    console.log("si[")
+    require('child_process').fork('best_move.js');
+    var pos = "f1e1";
+    res.send({
+        status: true,
+        position: pos
+    })
+});
 
 const port = process.env.PORT || 4000
 
