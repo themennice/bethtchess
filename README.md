@@ -1,11 +1,11 @@
 # BethtChess
 
-Best Chess prediction
+The best chess prediction
 
 ## Context
 The goal of the project is to build a model able to generate FEN description based on a schematic image of a chess board.
 
-Content
+## Content
 100000 images of a randomly generated chess positions of 5-15 pieces (2 kings and 3-13 pawns/pieces)
 Images were generated using 28 styles of chess boards and 32 styles of chess pieces totaling 896 board/piece style combinations.
 
@@ -26,10 +26,10 @@ Pieces were generated with the following probability distribution:
 
 Labels are in a filename in Forsyth–Edwards Notation format, but with dashes instead of slashes.
 
-##Acknowledgements
+## Acknowledgements
 Chess.com for providing images of pieces and boards.
 
-##Note
+## Note
 Some positions may be illegal such as both kings are under check.
 
 ## Inspiration
