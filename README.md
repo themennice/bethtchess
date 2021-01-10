@@ -33,7 +33,7 @@ Chess.com for providing images of pieces and boards.
 Some positions may be illegal such as both kings are under check.
 
 ## Inspiration
-2020 has definitely been the year of chess. Between 2020 locking everyone indoors, and Netflix's Queen Gambit raking in 62 millino viewers, everyone is either talking about chess, or watching others play chess. 
+2020 has definitely been the year of chess. Between 2020 locking everyone indoors, and Netflix's Queen Gambit raking in 62 million viewers, everyone is either talking about chess, or watching others play chess. 
 
 ## What it does
 
