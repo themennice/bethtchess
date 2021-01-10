@@ -43,6 +43,43 @@
   color: white;
 }
 
+.wrapper-buttons {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+.blue-button {
+  display: inline-block;
+  font-family: Whitney, "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 45px;
+  width: 250px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.blue-button {
+  background-color: #7289da;
+  border: 2px solid #7289da;
+  color: #fff;
+}
+
+.wrapper-buttons > * {
+  margin-bottom: 10px;
+}
+
+.wrapper-buttons > *:first-child {
+  margin-top: 10px;
+}
+
+.wrapper-buttons > *:last-child {
+  margin-bottom: 0px;
+}
+
+
 .App-link {
   color: #61dafb;
 }

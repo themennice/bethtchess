@@ -111,20 +111,23 @@ const WebcamComponent = () => {
             />
             <div>
                 { !isTimerActive ?
-                    <button
-                        className="ui inverted animate teal labeled icon button"
-                        onClick={ () => setTimerActive( !isTimerActive ) }>
-                        <i className="camera icon"/>
-                        Capture
-                    </button> :
+                    <div className="wrapper-buttons">
+                        <button
+                            onClick={ () => setTimerActive( !isTimerActive ) }
+                            className="blue-button">
+                            <i className="camera icon"/>
+                        Capture Photo
+                        </button>
+                    </div> :
                     // <button
                     //     className="ui inverted disabled animate teal labeled icon button">
                     //     <i className="camera icon"/>
                     //     { seconds }
                     // </button>
                     <div className="wrapper-buttons">
-                        <button className="white-button">Download for Windows</button>
-                        <button className="blue-button">Open Discord</button>
+                        <button className="blue-button">
+                            <i className="camera icon"/> { seconds }
+                        </button>
                     </div>
                 }
             </div>
