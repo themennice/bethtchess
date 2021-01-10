@@ -39,6 +39,12 @@ const MyComponent = () => {
                     body: formData
                 } ).then( res => res.json() );
                 console.log( JSON.stringify( res ) );
+
+                const response = await fetch( "http://localhost:4000/analyze", {
+                    method: "POST",
+                    body: formData
+                } ).then( response => response.json() );
+                console.log( JSON.stringify( response ) );
             }
 
             uploadImage( imageSrc ).then( r => {
