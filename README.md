@@ -1,6 +1,6 @@
 # BethtChess
 
-The best chess prediction
+The best chess prediction app! WOO
 
 ## Context
 The goal of the project is to build a model able to generate FEN description based on a schematic image of a chess board.
@@ -93,21 +93,3 @@ Because each of our members lives in a different time zone (including one across
 
 ## What's next for BethtChess?
 Maybe we'll turn it into an app available for iOS and Android mobile devices? Maybe we'll get rid of the "capture photo" so that before you even realize, it has already returned the next best move? Maybe we'll make it read out the instructions for those with impaired vision so that they know where to place the next piece? You'll just have to wait and see :)
-
-Built With
-
-
-## What it does
-
-## How I built it
-
-## Challenges I ran into
-
-## Accomplishments that I'm proud of
-
-## What I learned
-
-## What's next for Say Yes to Chess!
-
-=======
-Best chess move
