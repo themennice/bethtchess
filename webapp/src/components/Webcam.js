@@ -136,7 +136,7 @@ const WebcamComponent = () => {
                                     } }
                                     className="blue-button">
                                     <i className="camera icon"/>
-                                    Capture My Chess Game
+                                    Get the next best move
                                 </button>
                             }
                             modal
