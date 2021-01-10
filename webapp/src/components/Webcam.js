@@ -94,7 +94,7 @@ const WebcamComponent = () => {
             <div id="headerSegment" className="ui rounded inverted segment"
                  style={ {
                      position: 'center',
-                     width: '850px',
+                     width: '650px',
                      alignItems: 'center',
                      alignSelf: 'center',
                      color: 'transparent',
@@ -102,7 +102,7 @@ const WebcamComponent = () => {
                      marginLeft: 'auto',
                      marginRight: 'auto',
                  } }>
-                <h1 className="ui header">
+                <h1 id="main_name" className="ui header">
                     BethtChess
                 </h1>
             </div>
@@ -115,11 +115,13 @@ const WebcamComponent = () => {
                     border: '8px solid #555'
                 }}
                 ref={ webcamRef }
+                width = {900}
                 screenshotFormat="image/jpeg"
             />
             <div>
                 { !isTimerActive ?
                     <div className="wrapper-buttons">
+<<<<<<< HEAD
                         <Popup
                             style={ {
                                 background: '#2C2F33',
@@ -199,6 +201,14 @@ const WebcamComponent = () => {
                             ) }
                         </Popup>
 
+=======
+                        <button
+                            onClick={ () => setTimerActive( !isTimerActive ) }
+                            className="blue-button">
+                            <i className="camera icon"/>
+                        Capture My Chess Game
+                        </button>
+>>>>>>> 8ef2c2c313bfd39bef1b66352fcac3d02b8789b9
                     </div> :
                     <div className="progress">
                         <div className="progress-value"/>
