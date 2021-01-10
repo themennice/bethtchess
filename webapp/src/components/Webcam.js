@@ -91,7 +91,7 @@ const WebcamComponent = () => {
             <div id="headerSegment" className="ui rounded inverted segment"
                  style={ {
                      position: 'center',
-                     width: '850px',
+                     width: '650px',
                      alignItems: 'center',
                      alignSelf: 'center',
                      color: '#204229',
@@ -99,7 +99,7 @@ const WebcamComponent = () => {
                      marginLeft: 'auto',
                      marginRight: 'auto',
                  } }>
-                <h1 className="ui header">
+                <h1 id="main_name" className="ui header">
                     BethtChess
                 </h1>
             </div>
@@ -107,6 +107,7 @@ const WebcamComponent = () => {
             <Webcam
                 audio={ false }
                 ref={ webcamRef }
+                width = {900}
                 screenshotFormat="image/jpeg"
             />
             <div>
@@ -116,7 +117,7 @@ const WebcamComponent = () => {
                             onClick={ () => setTimerActive( !isTimerActive ) }
                             className="blue-button">
                             <i className="camera icon"/>
-                        Capture Photo
+                        Capture My Chess Game
                         </button>
                     </div> :
                     // <button
