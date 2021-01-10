@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Webcam from "react-webcam";
 import 'fomantic-ui/dist/semantic.min.css'
-import 'browserfs/dist/browserfs';
 
 const MyComponent = () => {
     const countdown = 3;
@@ -86,7 +85,6 @@ const MyComponent = () => {
                  style={ {
                      position: 'center',
                      width: '850px',
-                     left: 'c',
                      alignItems: 'center',
                      alignSelf: 'center',
                      color: '#204229',
