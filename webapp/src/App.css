@@ -31,7 +31,10 @@
 }
 
 .App-header {
-  background-color: #184a35;
+  background-size: contain;
+  background-position: center;
+  background-image: url("https://media.discordapp.net/attachments/796276290981724210/797894608058449971/Desktop_-_9.png?width=949&height=675");;
+  background-color: #2C2F33;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

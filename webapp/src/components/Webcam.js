@@ -100,7 +100,7 @@ const WebcamComponent = () => {
                      marginRight: 'auto',
                  } }>
                 <h1 className="ui header">
-                    BethChess.tech
+                    BethtChess
                 </h1>
             </div>
 
@@ -108,8 +108,6 @@ const WebcamComponent = () => {
                 audio={ false }
                 ref={ webcamRef }
                 screenshotFormat="image/jpeg"
-                height={720}
-                width={1080}
             />
             <div>
                 { !isTimerActive ?
@@ -119,29 +117,16 @@ const WebcamComponent = () => {
                         <i className="camera icon"/>
                         Capture
                     </button> :
-                    <button
-                        className="ui inverted disabled animate teal labeled icon button">
-                        <i className="camera icon"/>
-                        { seconds }
-                    </button>
+                    // <button
+                    //     className="ui inverted disabled animate teal labeled icon button">
+                    //     <i className="camera icon"/>
+                    //     { seconds }
+                    // </button>
+                    <div className="wrapper-buttons">
+                        <button className="white-button">Download for Windows</button>
+                        <button className="blue-button">Open Discord</button>
+                    </div>
                 }
-            </div>
-            <div className="row" style={ { background_color: '#869D05', color: '#FFFFFF' } }>
-                <div className="column">
-                    {/*{ image && (*/ }
-                    {/*    <div>*/ }
-                    {/*        <div>*/ }
-                    {/*            <button className="ui inverted animate green labeled icon button" onClick={ capture }>*/ }
-                    {/*                <i className="download icon"/>*/ }
-                    {/*                Analyze*/ }
-                    {/*            </button>*/ }
-                    {/*        </div>*/ }
-                    {/*        <img*/ }
-                    {/*            src={ image }*/ }
-                    {/*            alt="img"/>*/ }
-                    {/*    </div>*/ }
-                    {/*) }*/ }
-                </div>
             </div>
         </div>
     );
