@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Webcam from "react-webcam";
 import 'fomantic-ui/dist/semantic.min.css'
 
-const MyComponent = () => {
+const WebcamComponent = () => {
     const countdown = 3;
 
     const webcamRef = useRef( null );
@@ -91,7 +91,7 @@ const MyComponent = () => {
             <div id="headerSegment" className="ui rounded inverted segment"
                  style={ {
                      position: 'center',
-                     width: '850px',
+                     width: '650px',
                      alignItems: 'center',
                      alignSelf: 'center',
                      color: '#204229',
@@ -99,50 +99,41 @@ const MyComponent = () => {
                      marginLeft: 'auto',
                      marginRight: 'auto',
                  } }>
-                <h1 className="ui header">
-                    BethChess.tech
+                <h1 id="main_name" className="ui header">
+                    BethtChess
                 </h1>
             </div>
 
             <Webcam
                 audio={ false }
                 ref={ webcamRef }
+                width = {900}
                 screenshotFormat="image/jpeg"
             />
             <div>
                 { !isTimerActive ?
-                    <button
-                        className="ui inverted animate teal labeled icon button"
-                        onClick={ () => setTimerActive( !isTimerActive ) }>
-                        <i className="camera icon"/>
-                        Capture
-                    </button> :
-                    <button
-                        className="ui inverted disabled animate teal labeled icon button">
-                        <i className="camera icon"/>
-                        { seconds }
-                    </button>
+                    <div className="wrapper-buttons">
+                        <button
+                            onClick={ () => setTimerActive( !isTimerActive ) }
+                            className="blue-button">
+                            <i className="camera icon"/>
+                        Capture My Chess Game
+                        </button>
+                    </div> :
+                    // <button
+                    //     className="ui inverted disabled animate teal labeled icon button">
+                    //     <i className="camera icon"/>
+                    //     { seconds }
+                    // </button>
+                    <div className="wrapper-buttons">
+                        <button className="blue-button">
+                            <i className="camera icon"/> { seconds }
+                        </button>
+                    </div>
                 }
-            </div>
-            <div className="row" style={ { background_color: '#869D05', color: '#FFFFFF' } }>
-                <div className="column">
-                    {/*{ image && (*/ }
-                    {/*    <div>*/ }
-                    {/*        <div>*/ }
-                    {/*            <button className="ui inverted animate green labeled icon button" onClick={ capture }>*/ }
-                    {/*                <i className="download icon"/>*/ }
-                    {/*                Analyze*/ }
-                    {/*            </button>*/ }
-                    {/*        </div>*/ }
-                    {/*        <img*/ }
-                    {/*            src={ image }*/ }
-                    {/*            alt="img"/>*/ }
-                    {/*    </div>*/ }
-                    {/*) }*/ }
-                </div>
             </div>
         </div>
     );
 };
 
-export default MyComponent;
+export default WebcamComponent;

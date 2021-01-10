@@ -3,7 +3,8 @@
 }
 
 #headerSegment{
-  background-color: #204229;
+  background-color: none;
+  margin-bottom: 40px;
 }
 .webcam{
   position: center;
@@ -31,7 +32,10 @@
 }
 
 .App-header {
-  background-color: #184a35;
+  background-size: cover;
+  /*background-position: center;*/
+  background-image: url("https://media.discordapp.net/attachments/796276290981724210/797903174711246928/Frame_1.png?width=1156&height=650");;
+  background-color: #2C2F33;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -40,10 +44,112 @@
   color: white;
 }
 
+.wrapper-buttons {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+#main_name {
+  font-size: 48px;
+  font-weight: 400;
+  background-color: none;
+}
+
+.blue-button {
+  display: inline-block;
+  font-family: Whitney, "Open Sans", Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 20pt;
+  border-radius: 7px;
+  cursor: pointer;
+  height: 60px;
+  width: 400px;
+  margin-left: -60px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.blue-button {
+  background-color: #7289da;
+  border: 2px solid #7289da;
+  color: #fff;
+}
+
+.wrapper-buttons > * {
+  margin-bottom: 30px;
+}
+
+.wrapper-buttons > *:first-child {
+  margin-top: 30px;
+}
+
+.wrapper-buttons > *:last-child {
+  margin-bottom: 0px;
+}
+
+
 .App-link {
   color: #61dafb;
 }
 
+@keyframes anvil {
+  0% {
+    transform: scale(1) translateY(0px);
+    opacity: 0;
+    box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+  }
+  1% {
+    transform: scale(0.96) translateY(10px);
+    opacity: 0;
+    box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+    box-shadow: 0 0 500px rgba(241, 241, 241, 0);
+  }
+}
+
+.popup-content {
+  -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.modal {
+  font-size: 20px;
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
