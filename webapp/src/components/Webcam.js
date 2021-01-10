@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Webcam from "react-webcam";
 import 'fomantic-ui/dist/semantic.min.css'
 
-const MyComponent = () => {
+const WebcamComponent = () => {
     const countdown = 3;
 
     const webcamRef = useRef( null );
@@ -108,6 +108,8 @@ const MyComponent = () => {
                 audio={ false }
                 ref={ webcamRef }
                 screenshotFormat="image/jpeg"
+                height={720}
+                width={1080}
             />
             <div>
                 { !isTimerActive ?
@@ -145,4 +147,4 @@ const MyComponent = () => {
     );
 };
 
-export default MyComponent;
+export default WebcamComponent;
