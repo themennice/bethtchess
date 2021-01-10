@@ -4,8 +4,10 @@
 }
 
 #headerSegment{
-  background-color: #131313;
+  background-color: none;
+  margin-bottom: 10px;
 }
+
 .webcam{
   position: center;
   display: flex;
@@ -32,8 +34,8 @@
 }
 
 .App-header {
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  /*background-position: center;*/
   background-image: url("https://media.discordapp.net/attachments/796276290981724210/797903174711246928/Frame_1.png?width=1201&height=676");
   background-color: #131313;
   min-height: 100vh;
@@ -50,15 +52,23 @@
   margin-right: auto;
   width: 250px;
 }
+
+#main_name {
+  font-size: 48px;
+  font-weight: 400;
+  background-color: none;
+}
+
 .blue-button {
   display: inline-block;
   font-family: Whitney, "Open Sans", Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 11pt;
-  border-radius: 3px;
+  font-weight: 900;
+  font-size: 20pt;
+  border-radius: 7px;
   cursor: pointer;
-  height: 45px;
-  width: 250px;
+  height: 60px;
+  width: 400px;
+  margin-left: -60px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
 

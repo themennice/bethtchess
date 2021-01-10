@@ -94,7 +94,7 @@ const WebcamComponent = () => {
             <div id="headerSegment" className="ui rounded inverted segment"
                  style={ {
                      position: 'center',
-                     width: '850px',
+                     width: '950px',
                      alignItems: 'center',
                      alignSelf: 'center',
                      color: 'transparent',
@@ -102,7 +102,7 @@ const WebcamComponent = () => {
                      marginLeft: 'auto',
                      marginRight: 'auto',
                  } }>
-                <h1 className="ui header">
+                <h1 id="main_name" className="ui header">
                     BethtChess
                 </h1>
             </div>
@@ -114,6 +114,7 @@ const WebcamComponent = () => {
                     border: '8px solid #555'
                 }}
                 ref={ webcamRef }
+                width={950}
                 screenshotFormat="image/jpeg"
             />
             <div>
@@ -135,7 +136,7 @@ const WebcamComponent = () => {
                                     } }
                                     className="blue-button">
                                     <i className="camera icon"/>
-                                    CAPTURE PHOTO
+                                    Capture My Chess Game
                                 </button>
                             }
                             modal
