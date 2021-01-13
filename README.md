@@ -1,6 +1,6 @@
 # BethtChess
 
-The best chess prediction app! WOO
+Get the next best chess move in real time from your camera!
 
 ## Context
 The goal of the project is to build a model able to generate FEN description based on a schematic image of a chess board.
