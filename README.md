@@ -73,7 +73,7 @@ React.js and node.js were mainly used to create the website for our project (as 
 
 Predicting next best move using FEN stream
 
-To predict the next best move, Node.js (express module) was used and stockfish.js was used to communicate with the most powerful chess engine so that we could receive information from the API to deliver to our user. We also trained the Deep Learning model with Keras and predicted the FEN string for the image taken from the webcam after image processing using OpenCV.
+To predict the next best move, Node.js (Express module) was used and stockfish.js was used to communicate with the most powerful chess engine so that we could receive information from the API to deliver to our user. We also trained the Deep Learning model with Keras and predicted the FEN string for the image taken from the webcam after image processing using OpenCV.
 
 ## Challenges we ran into
 Whether if it's 8pm, 12am, 4am, it doesn't matter to us. Literally. Each of us live in a different timezone and a large challenge was working around these differences. But that's okay. We stayed resilient, optimistic, and determined to finish our project off with a bang!
